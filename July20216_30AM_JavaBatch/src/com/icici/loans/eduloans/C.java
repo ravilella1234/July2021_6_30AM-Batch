@@ -1,6 +1,7 @@
 package com.icici.loans.eduloans;
 
 import com.icici.loans.carloans.A;
+import com.icici.loans.carloans.B;
 
 public class C extends A
 {
@@ -11,14 +12,13 @@ public class C extends A
 
 	public static void main(String[] args) 
 	{
-		A a  = new A();
-		a.m1();
-		System.out.println(a.x);
+		B b = new B();
+		b.m1();
+		b.m2();
 		
 		C c = new C();
 		c.m1();
 		c.m3();
-		System.out.println( c.x);
 	}
 
 }
