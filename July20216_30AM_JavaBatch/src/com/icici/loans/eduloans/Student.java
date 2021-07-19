@@ -2,11 +2,19 @@ package com.icici.loans.eduloans;
 
 class Student 
 {
+	int sno;
+	String sname;
 	
-
-	public static void main(String[] args) 
+	public Student(int sno, String sname) 
 	{
-		Student s1 = new Student();
-		
+		super();
+		this.sno = sno;
+		this.sname = sname;
 	}
+
+	@Override
+	public String toString() {
+		return "Student [sno=" + sno + ", sname=" + sname + "]";
+	}
+	
 }
