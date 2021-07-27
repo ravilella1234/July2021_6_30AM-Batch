@@ -15,7 +15,7 @@ public  class A
 	}
 	
 		
-	public static void m3()
+	public  void m3()
 	{
 		System.out.println("iam m3 static");
 	}
@@ -35,7 +35,7 @@ public  class A
 	{
 		A a = new A();
 		a.m1();
-		A.m3();
+		
 	}
 
 }

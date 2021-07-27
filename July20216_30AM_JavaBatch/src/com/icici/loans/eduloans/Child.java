@@ -1,4 +1,4 @@
-package pack1;
+package com.icici.loans.eduloans;
 
 abstract class Parent
 {
@@ -16,7 +16,7 @@ abstract class Parent
 
 public class Child extends Parent
 {
-	public  Object workhard()
+	public  Number workhard()
 	{
 		System.out.println("Child : wake-up anytime,goto movies");
 		return 0;
