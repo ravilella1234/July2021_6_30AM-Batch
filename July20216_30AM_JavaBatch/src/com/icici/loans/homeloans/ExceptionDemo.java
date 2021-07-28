@@ -31,6 +31,10 @@ public class ExceptionDemo
 				e.printStackTrace();
 				//System.out.println("Dr value should be greater than zero");
 			}
+			finally 
+			{
+				System.out.println("iam final Block....");
+			}
 		}
 
 	}
