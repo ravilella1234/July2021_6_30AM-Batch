@@ -4,6 +4,8 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class BrowserLaunching 
 {
 
@@ -11,11 +13,13 @@ public class BrowserLaunching
 	{
 		WebDriver driver;
 		
-		System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Desktop\\July 6_30 AM Batch Drivers\\chromedriver.exe");
+		WebDriverManager.chromedriver().setup();
+		//System.setProperty("webdriver.chrome.driver", "C:\\Users\\DELL\\Desktop\\July 6_30 AM Batch Drivers\\chromedriver.exe");
 		driver = new ChromeDriver();
 		driver.get("https://www.amazon.in");
 		
-		System.setProperty("webdriver.gecko.driver", "C:/Users/DELL/Desktop/July 6_30 AM Batch Drivers/geckodriver.exe");
+		WebDriverManager.firefoxdriver().setup();
+		//System.setProperty("webdriver.gecko.driver", "C:/Users/DELL/Desktop/July 6_30 AM Batch Drivers/geckodriver.exe");
 		driver = new FirefoxDriver();
 		driver.get("https://www.bestbuy.com");
 		
