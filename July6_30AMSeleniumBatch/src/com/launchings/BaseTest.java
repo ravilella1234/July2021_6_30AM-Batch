@@ -6,6 +6,9 @@ import java.util.Properties;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.openqa.selenium.firefox.FirefoxProfile;
+import org.openqa.selenium.firefox.ProfilesIni;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -44,14 +47,44 @@ public class BaseTest
 		}
 		else if(prop.getProperty(browser).equals("firefox"))
 		{
+			//Binaries
+			//Logs
+			//Notifications
+			//Certificate errors
+			//Proxy Settings
+			
 			WebDriverManager.firefoxdriver().setup();
-			driver = new FirefoxDriver();
+			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, "logs\\firefox.log");
+			
+			ProfilesIni p = new ProfilesIni();
+			FirefoxProfile profile = p.getProfile("AugustFFProfile");
+			
+			//notifications Handling
+			profile.setPreference("dom.webnotifications.enabled", false);
+			
+			//Certificate errors Handling
+			profile.setAcceptUntrustedCertificates(true);
+			profile.setAssumeUntrustedCertificateIssuer(false);
+			
+			//Working with Proxy Settings
+			//profile.setPreference("network.proxy.type", 1);
+			//profile.setPreference("network.proxy.socks", "192.156.10.1");
+			//profile.setPreference("network.proxy.socks_port", 1987);
+			
+			
+			FirefoxOptions option = new FirefoxOptions();
+			option.setProfile(profile);
+
+			//Setting the Firefox Binaries path
+			//option.setBinary("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
+			
+			driver = new FirefoxDriver(option);
 		}
 	}
 	
 	public static void navigate(String url)
 	{
-		//driver.get(childProp.getProperty(url));
+		driver.get(childProp.getProperty(url));
 		driver.navigate().to(childProp.getProperty(url));
 	}
 
