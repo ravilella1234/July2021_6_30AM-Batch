@@ -5,6 +5,8 @@ import java.util.Properties;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeDriverService;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
@@ -42,8 +44,17 @@ public class BaseTest
 	{
 		if(prop.getProperty(browser).equals("chrome"))
 		{
+			System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, "logs//chromelog.log");
+			
+			ChromeOptions option = new ChromeOptions();
+			option.addArguments("user-data-dir=C:\\Users\\DELL\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 24");
+			option.addArguments("--disable-notifications");
+			option.addArguments("--start-maximized");
+			//option.addArguments("--ignore-certificate-errors-spki-list");
+			//option.addArguments("--proxy-server=http://192.168.10.1:9090");
+			
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver();
+			driver = new ChromeDriver(option);
 		}
 		else if(prop.getProperty(browser).equals("firefox"))
 		{
