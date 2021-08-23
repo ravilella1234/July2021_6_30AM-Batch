@@ -21,5 +21,8 @@
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/July 6_30 AM Batch Drivers/jar_files/slf4j-api-1.7.30.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/July 6_30 AM Batch Drivers/jar_files/webdrivermanager-4.4.3.jar"/>
 	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/July 6_30 AM Batch Drivers/log4j-1.2.17.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/July 6_30 AM Batch Drivers/extentreports-4.0.9.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/July 6_30 AM Batch Drivers/freemarker-2.3.23.jar"/>
+	<classpathentry kind="lib" path="C:/Users/DELL/Desktop/July 6_30 AM Batch Drivers/mongo-java-driver-2.10.1.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
