@@ -1,10 +1,14 @@
 package com.launchings;
 
+import java.io.File;
 import java.io.FileInputStream;
+import java.util.Date;
 import java.util.Properties;
 
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -14,11 +18,13 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.firefox.FirefoxOptions;
 import org.openqa.selenium.firefox.FirefoxProfile;
 import org.openqa.selenium.firefox.ProfilesIni;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -32,6 +38,7 @@ public class BaseTest
 	public static Properties orProp;
 	public static ExtentReports report;
 	public static ExtentTest test;
+	public static String projectpath = System.getProperty("user.dir");
 	
 	public static void init() throws Exception
 	{
@@ -270,6 +277,42 @@ public class BaseTest
 		}
 		
 		return by;
+	}
+	
+	
+	public static boolean isLinksEqual(String expectedLink) 
+	{
+		 String actualLink = driver.findElement(By.linkText("Customer Service")).getText();
+		
+		if(actualLink.equals(expectedLink))
+			return true;
+		else
+			return false;
+	}
+	
+	//  ***********************  Reportings *************************
+	
+	public static void reportFailure(String failMsg) throws Exception 
+	{
+		test.log(Status.FAIL, failMsg);
+		takesScreenshot();
+	}
+
+	public static void reportSuccess(String passMsg) 
+	{
+		test.log(Status.PASS, passMsg);
+	}
+	
+	public static void takesScreenshot() throws Exception
+	{
+		
+		Date dt=new Date();
+		System.out.println(dt);
+		String dateFormat=dt.toString().replace(":", "_").replace(" ", "_")+".png";		
+		File scrFile=((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileHandler.copy(scrFile, new File(projectpath+"//failurescreenshots//"+dateFormat));
+		
+		test.log(Status.INFO, "Screenshot --->" +test.addScreenCaptureFromPath(projectpath+"//failurescreenshots//"+dateFormat));
 	}
 
 }
