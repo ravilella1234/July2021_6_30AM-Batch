@@ -1,0 +1,11 @@
+1629943699845	mozrunner::runner	INFO	Running command: "C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe" "-marionette" "-foreground" "-no-remote" "-profile" "C:\\Users\\DELL\\AppData\\Local\\Temp\\rust_mozprofileMJ2Es4"
+console.error: BroadcastService: 
+  receivedBroadcastMessage: handler for
+  remote-settings/monitor_changes
+  threw error:
+  Message: Error: Polling for changes failed: http://%(server)s/dummy/blocklist//buckets/monitor/collections/changes/records?_expected=%221629943052272%22 is not a valid URL..
+  Stack:
+    remoteSettingsFunction/remoteSettings.pollChanges@resource://services-settings/remote-settings.js:257:13
+
+1629943739129	Marionette	INFO	Listening on port 63909
+1629943739527	Marionette	WARN	TLS certificate errors will be ignored for this session
