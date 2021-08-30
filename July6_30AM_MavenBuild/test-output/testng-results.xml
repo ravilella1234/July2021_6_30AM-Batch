@@ -1,61 +1,139 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="1" total="3" passed="2">
+<testng-results ignored="0" total="6" passed="6" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="107" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+  <suite started-at="2021-08-30T02:07:21Z" name="AutomationSuite" finished-at="2021-08-30T02:11:31Z" duration-ms="250205">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="107" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
-      <class name="com.project.July6_30AM_MavenBuild.TNG_001">
-        <test-method status="PASS" signature="beforeSuite()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="beforeSuite" is-config="true" duration-ms="35" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeSuite -->
-        <test-method status="PASS" signature="beforeTest()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="beforeTest" is-config="true" duration-ms="1" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeTest -->
-        <test-method status="PASS" signature="beforeClass()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="beforeClass" is-config="true" duration-ms="0" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforeClass -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+    <test started-at="2021-08-30T02:07:21Z" name="ChromeTest" finished-at="2021-08-30T02:09:14Z" duration-ms="112725">
+      <class name="com.project.July6_30AM_MavenBuild.CheckBox1">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.project.July6_30AM_MavenBuild.CheckBox1@6d07a63d]" started-at="2021-08-30T02:08:50Z" name="beforeMethod" finished-at="2021-08-30T02:09:06Z" duration-ms="15482" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="f()[pri:1, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="f" duration-ms="14" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+        <test-method signature="checkboxTest()[pri:0, instance:com.project.July6_30AM_MavenBuild.CheckBox1@6d07a63d]" started-at="2021-08-30T02:09:06Z" name="checkboxTest" finished-at="2021-08-30T02:09:11Z" duration-ms="5013" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkboxTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.CheckBox1@6d07a63d]" started-at="2021-08-30T02:09:11Z" name="afterMethod" finished-at="2021-08-30T02:09:14Z" duration-ms="2929" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.project.July6_30AM_MavenBuild.CheckBox1 -->
+      <class name="com.project.July6_30AM_MavenBuild.TNG_002">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_002@479ceda0]" started-at="2021-08-30T02:07:51Z" name="beforeMethod" finished-at="2021-08-30T02:08:04Z" duration-ms="13277" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="f()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_002@479ceda0]" started-at="2021-08-30T02:08:04Z" name="f" finished-at="2021-08-30T02:08:45Z" duration-ms="40711" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="afterMethod" is-config="true" duration-ms="3" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_002@479ceda0]" started-at="2021-08-30T02:08:45Z" name="afterMethod" finished-at="2021-08-30T02:08:50Z" duration-ms="5604" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="a()[pri:3, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="a" duration-ms="5" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- a -->
-        <test-method status="PASS" signature="beforeMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+      </class> <!-- com.project.July6_30AM_MavenBuild.TNG_002 -->
+      <class name="com.project.July6_30AM_MavenBuild.RadioButton1">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.project.July6_30AM_MavenBuild.RadioButton1@573906eb]" started-at="2021-08-30T02:07:21Z" name="beforeMethod" finished-at="2021-08-30T02:07:41Z" duration-ms="20212" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="afterMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="afterMethod" is-config="true" duration-ms="5" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+        <test-method signature="radioButton1()[pri:0, instance:com.project.July6_30AM_MavenBuild.RadioButton1@573906eb]" started-at="2021-08-30T02:07:41Z" name="radioButton1" finished-at="2021-08-30T02:07:45Z" duration-ms="3288" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioButton1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.RadioButton1@573906eb]" started-at="2021-08-30T02:07:45Z" name="afterMethod" finished-at="2021-08-30T02:07:51Z" duration-ms="6050" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="afterClass()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="afterClass" is-config="true" duration-ms="0" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+      </class> <!-- com.project.July6_30AM_MavenBuild.RadioButton1 -->
+    </test> <!-- ChromeTest -->
+    <test started-at="2021-08-30T02:09:14Z" name="FirefoxTest" finished-at="2021-08-30T02:11:31Z" duration-ms="137456">
+      <class name="com.project.July6_30AM_MavenBuild.CheckBox1">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.project.July6_30AM_MavenBuild.CheckBox1@20ca951f]" started-at="2021-08-30T02:10:55Z" name="beforeMethod" finished-at="2021-08-30T02:11:24Z" duration-ms="29444" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterClass -->
-        <test-method status="PASS" signature="afterTest()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="afterTest" is-config="true" duration-ms="1" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="checkboxTest()[pri:0, instance:com.project.July6_30AM_MavenBuild.CheckBox1@20ca951f]" started-at="2021-08-30T02:11:24Z" name="checkboxTest" finished-at="2021-08-30T02:11:25Z" duration-ms="1120" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterTest -->
-        <test-method status="PASS" signature="afterSuite()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_001@59d016c9]" name="afterSuite" is-config="true" duration-ms="0" started-at="2021-08-27T01:59:40Z" finished-at="2021-08-27T01:59:40Z">
+        </test-method> <!-- checkboxTest -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.CheckBox1@20ca951f]" started-at="2021-08-30T02:11:25Z" name="afterMethod" finished-at="2021-08-30T02:11:31Z" duration-ms="5954" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- afterSuite -->
-      </class> <!-- com.project.July6_30AM_MavenBuild.TNG_001 -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.project.July6_30AM_MavenBuild.CheckBox1 -->
+      <class name="com.project.July6_30AM_MavenBuild.TNG_002">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_002@63611043]" started-at="2021-08-30T02:09:49Z" name="beforeMethod" finished-at="2021-08-30T02:10:13Z" duration-ms="23622" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="f()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_002@63611043]" started-at="2021-08-30T02:10:13Z" name="f" finished-at="2021-08-30T02:10:47Z" duration-ms="34401" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- f -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.TNG_002@63611043]" started-at="2021-08-30T02:10:47Z" name="afterMethod" finished-at="2021-08-30T02:10:55Z" duration-ms="7274" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.project.July6_30AM_MavenBuild.TNG_002 -->
+      <class name="com.project.July6_30AM_MavenBuild.RadioButton1">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:com.project.July6_30AM_MavenBuild.RadioButton1@45a37759]" started-at="2021-08-30T02:09:14Z" name="beforeMethod" finished-at="2021-08-30T02:09:42Z" duration-ms="28507" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="radioButton1()[pri:0, instance:com.project.July6_30AM_MavenBuild.RadioButton1@45a37759]" started-at="2021-08-30T02:09:42Z" name="radioButton1" finished-at="2021-08-30T02:09:43Z" duration-ms="824" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- radioButton1 -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:com.project.July6_30AM_MavenBuild.RadioButton1@45a37759]" started-at="2021-08-30T02:09:43Z" name="afterMethod" finished-at="2021-08-30T02:09:49Z" duration-ms="6292" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- com.project.July6_30AM_MavenBuild.RadioButton1 -->
+    </test> <!-- FirefoxTest -->
+  </suite> <!-- AutomationSuite -->
 </testng-results>

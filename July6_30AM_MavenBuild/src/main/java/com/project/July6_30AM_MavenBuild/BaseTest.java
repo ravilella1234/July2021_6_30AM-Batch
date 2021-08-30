@@ -69,21 +69,21 @@ public class BaseTest
 	
 	public static void launch(String browser)
 	{
-		if(prop.getProperty(browser).equals("chrome"))
+		if(browser.equals("chrome"))
 		{
 			System.setProperty(ChromeDriverService.CHROME_DRIVER_LOG_PROPERTY, projectpath+"\\logs\\chromelog.log");
 			
-			ChromeOptions option = new ChromeOptions();
-			option.addArguments("user-data-dir=C:\\Users\\DELL\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 24");
-			option.addArguments("--disable-notifications");
-			option.addArguments("--start-maximized");
+			//ChromeOptions option = new ChromeOptions();
+			//option.addArguments("user-data-dir=C:\\Users\\DELL\\AppData\\Local\\Google\\Chrome\\User Data\\Profile 24");
+			//option.addArguments("--disable-notifications");
+			//option.addArguments("--start-maximized");
 			//option.addArguments("--ignore-certificate-errors-spki-list");
 			//option.addArguments("--proxy-server=http://192.168.10.1:9090");
 			
 			WebDriverManager.chromedriver().setup();
-			driver = new ChromeDriver(option);
+			driver = new ChromeDriver();
 		}
-		else if(prop.getProperty(browser).equals("firefox"))
+		else if(browser.equals("firefox"))
 		{
 			//Binaries
 			//Logs
@@ -94,15 +94,15 @@ public class BaseTest
 			WebDriverManager.firefoxdriver().setup();
 			System.setProperty(FirefoxDriver.SystemProperty.BROWSER_LOGFILE, projectpath+"\\logs\\firefox.log");
 			
-			ProfilesIni p = new ProfilesIni();
-			FirefoxProfile profile = p.getProfile("AugustFFProfile");
+			//ProfilesIni p = new ProfilesIni();
+			//FirefoxProfile profile = p.getProfile("AugustFFProfile");
 			
 			//notifications Handling
-			profile.setPreference("dom.webnotifications.enabled", false);
+			//profile.setPreference("dom.webnotifications.enabled", false);
 			
 			//Certificate errors Handling
-			profile.setAcceptUntrustedCertificates(true);
-			profile.setAssumeUntrustedCertificateIssuer(false);
+			//profile.setAcceptUntrustedCertificates(true);
+			//profile.setAssumeUntrustedCertificateIssuer(false);
 			
 			//Working with Proxy Settings
 			//profile.setPreference("network.proxy.type", 1);
@@ -110,13 +110,13 @@ public class BaseTest
 			//profile.setPreference("network.proxy.socks_port", 1987);
 			
 			
-			FirefoxOptions option = new FirefoxOptions();
-			option.setProfile(profile);
+			//FirefoxOptions option = new FirefoxOptions();
+			//option.setProfile(profile);
 
 			//Setting the Firefox Binaries path
 			//option.setBinary("C:\\Program Files (x86)\\Mozilla Firefox\\firefox.exe");
 			
-			driver = new FirefoxDriver(option);
+			driver = new FirefoxDriver();
 		}
 	}
 	
