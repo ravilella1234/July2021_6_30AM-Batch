@@ -1,7 +1,26 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="Failed suite [AutomationSuite]" guice-stage="DEVELOPMENT">
-  <test thread-count="5" name="FirefoxTest(failed)">
+<suite parallel="tests" name="Failed suite [AutomationSuite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" parallel="tests" name="ChromeTest(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="com.project.July6_30AM_MavenBuild.RadioButton1">
+        <methods>
+          <include name="afterMethod"/>
+          <include name="radioButton1"/>
+          <include name="beforeMethod"/>
+        </methods>
+      </class> <!-- com.project.July6_30AM_MavenBuild.RadioButton1 -->
+      <class name="com.project.July6_30AM_MavenBuild.CheckBox1">
+        <methods>
+          <include name="beforeMethod"/>
+          <include name="checkboxTest"/>
+          <include name="afterMethod"/>
+        </methods>
+      </class> <!-- com.project.July6_30AM_MavenBuild.CheckBox1 -->
+    </classes>
+  </test> <!-- ChromeTest(failed) -->
+  <test thread-count="5" parallel="tests" name="FirefoxTest(failed)">
     <parameter name="browser" value="firefox"/>
     <classes>
       <class name="com.project.July6_30AM_MavenBuild.TNG_002">
@@ -11,13 +30,6 @@
           <include name="f"/>
         </methods>
       </class> <!-- com.project.July6_30AM_MavenBuild.TNG_002 -->
-      <class name="com.project.July6_30AM_MavenBuild.RadioButton1">
-        <methods>
-          <include name="afterMethod"/>
-          <include name="radioButton1"/>
-          <include name="beforeMethod"/>
-        </methods>
-      </class> <!-- com.project.July6_30AM_MavenBuild.RadioButton1 -->
       <class name="com.project.July6_30AM_MavenBuild.CheckBox1">
         <methods>
           <include name="beforeMethod"/>
