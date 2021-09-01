@@ -11,7 +11,7 @@ import org.testng.annotations.AfterMethod;
 public class TNG_002 extends BaseTest
 {
 	
-  @BeforeMethod
+  @BeforeMethod(groups = {"regression"})
   @Parameters("browser")
   public void beforeMethod(String bType) throws Exception 
   {
@@ -26,7 +26,7 @@ public class TNG_002 extends BaseTest
 		test.log(Status.INFO, "Navigating to application :- " + childProp.getProperty("amazonurl"));
   }
   
-  @Test
+  @Test(groups = {"regression"})
   public void f() 
   {
 	    selectOption("amazondropoption_id","Books");
@@ -39,7 +39,7 @@ public class TNG_002 extends BaseTest
 		test.log(Status.SKIP,"Clicked the element by using the locator :- " + orProp.getProperty("amazonsearchbutton_xpath"));
   }
 
-  @AfterMethod
+  @AfterMethod(groups = {"regression"})
   public void afterMethod() 
   {
 	  report.flush();

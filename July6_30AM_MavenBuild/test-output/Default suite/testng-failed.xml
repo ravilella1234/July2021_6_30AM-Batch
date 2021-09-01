@@ -3,13 +3,14 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.project.July6_30AM_MavenBuild.TNG_002">
+      <class name="com.project.July6_30AM_MavenBuild.TestDependency">
         <methods>
-          <include name="afterMethod"/>
-          <include name="beforeMethod"/>
-          <include name="f"/>
+          <include name="green"/>
+          <include name="orange"/>
+          <include name="white"/>
+          <include name="blue"/>
         </methods>
-      </class> <!-- com.project.July6_30AM_MavenBuild.TNG_002 -->
+      </class> <!-- com.project.July6_30AM_MavenBuild.TestDependency -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
