@@ -13,11 +13,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeDriverService;
-import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.firefox.FirefoxProfile;
-import org.openqa.selenium.firefox.ProfilesIni;
 import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -39,6 +35,13 @@ public class BaseTest
 	public static ExtentReports report;
 	public static ExtentTest test;
 	public static String projectpath = System.getProperty("user.dir");
+	public static String filePath;
+	
+	static
+	{
+		Date d = new Date();
+		filePath = d.toString().replace(':', '_').replace(' ', '_');
+	}
 	
 	public static void init() throws Exception
 	{
