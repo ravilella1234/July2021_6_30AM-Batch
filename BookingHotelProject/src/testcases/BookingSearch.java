@@ -12,6 +12,12 @@ public class BookingSearch
 	}
 	
 	@Test
+	public void loadBooking()
+	{
+		System.out.println(".................... Loading Booking ...................");
+	}
+	
+	@Test
 	public void selectHotel()
 	{
 		System.out.println("Selecting a Hotel...");
