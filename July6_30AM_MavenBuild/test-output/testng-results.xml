@@ -2,16 +2,31 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-09-21T01:30:59Z" name="loginSuite" finished-at="2021-09-21T01:30:59Z" duration-ms="94">
+  <suite started-at="2021-10-05T01:38:04Z" name="Suite" finished-at="2021-10-05T01:38:23Z" duration-ms="18825">
     <groups>
     </groups>
-    <test started-at="2021-09-21T01:30:59Z" name="loginTest" finished-at="2021-09-21T01:30:59Z" duration-ms="94">
-      <class name="testngrunner.Login">
-        <test-method signature="f()[pri:0, instance:testngrunner.Login@52aa2946]" started-at="2021-09-21T01:30:59Z" name="f" finished-at="2021-09-21T01:30:59Z" duration-ms="23" status="PASS">
+    <test started-at="2021-10-05T01:38:04Z" name="Test" finished-at="2021-10-05T01:38:23Z" duration-ms="18825">
+      <class name="pom.POM_001">
+        <test-method is-config="true" signature="beforeMethod(java.lang.String)[pri:0, instance:pom.POM_001@1ab06251]" started-at="2021-10-05T01:38:04Z" name="beforeMethod" finished-at="2021-10-05T01:38:18Z" duration-ms="14013" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method signature="f()[pri:0, instance:pom.POM_001@1ab06251]" started-at="2021-10-05T01:38:18Z" name="f" finished-at="2021-10-05T01:38:23Z" duration-ms="4732" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- f -->
-      </class> <!-- testngrunner.Login -->
-    </test> <!-- loginTest -->
-  </suite> <!-- loginSuite -->
+        <test-method is-config="true" signature="afterMethod()[pri:0, instance:pom.POM_001@1ab06251]" started-at="2021-10-05T01:38:23Z" name="afterMethod" finished-at="2021-10-05T01:38:23Z" duration-ms="1" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+      </class> <!-- pom.POM_001 -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>
